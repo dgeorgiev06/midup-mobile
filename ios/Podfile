@@ -1,0 +1,55 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '11.2'
+
+target 'Midup' do
+  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+  #use_frameworks!
+
+  # Pods for Midup
+
+  pod 'React', :path => '../node_modules/react-native'
+
+  # Flexbox Layout Manager Used By React Natve
+  pod 'yoga', :path => '../node_modules/react-native/ReactCommon/yoga/Yoga.podspec'
+
+  # React Native
+  pod 'React', path: '../node_modules/react-native', subspecs: [
+    # Comment out any unneeded subspecs to reduce bundle size.
+    'Core',
+    'DevSupport',
+    'RCTActionSheet',
+    'RCTAnimation',
+    'RCTBlob',
+    'RCTCameraRoll',
+    'RCTGeolocation',
+    'RCTImage',
+    'RCTNetwork',
+    'RCTPushNotification',
+    'RCTSettings',
+    'RCTTest',
+    'RCTText',
+    'RCTVibration',
+    'RCTWebSocket',
+    'RCTLinkingIOS'
+  ]
+
+  # Mapbox
+  pod 'react-native-mapbox-gl', :path => '../node_modules/@mapbox/react-native-mapbox-gl'
+
+  pod 'RNImageCropPicker', :path =>  '../node_modules/react-native-image-crop-picker'
+
+  inherit! :search_paths
+
+  pod 'RNDeviceInfo', :path => '../node_modules/react-native-device-info'
+
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    if target.name == "React"
+      target.remove_from_project
+    end
+  end
+end

@@ -1,0 +1,33 @@
+{
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "relationships": [
+        {
+            "relationshipName": "eventOrganizer",
+            "otherEntityName": "userProfile",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "eventName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "eventDate",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "venueId",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20181024155210",
+    "dto": "mapstruct",
+    "searchEngine": "elasticsearch",
+    "service": "serviceClass",
+    "entityTableName": "event",
+    "jpaMetamodelFiltering": true,
+    "pagination": "infinite-scroll"
+}

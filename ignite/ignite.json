@@ -1,0 +1,16 @@
+{
+	"name": "Midup",
+	"createdWith": "2.1.2",
+	"examples": "classic",
+	"jhipsterDirectory": "../../jhipster",
+	"authType": "jwt",
+	"searchEngine": true,
+	"websockets": true,
+	"socialLogin": false,
+	"askToOverwrite": true,
+	"generators": {
+		"entity": "ignite-jhipster",
+		"import-jdl": "ignite-jhipster",
+		"upgrade": "ignite-jhipster"
+	}
+}
