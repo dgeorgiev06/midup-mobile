@@ -54,7 +54,7 @@ const create = (baseURL = 'https://maps.googleapis.com/') => {
     
     let params = {
         placeid: id,
-        key: "AIzaSyAykwjnB8Z2R1ElVJ1TescPUJeBaDDi8gk"
+        key: ""
     }
     console.tron.log(params);
     return api.get('maps/api/place/details/json', params);
