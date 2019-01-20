@@ -43,7 +43,7 @@ const create = (baseURL = 'https://maps.googleapis.com/') => {
         radius: radius,
         types: "restaurant",
         name: "bar",
-        key: "AIzaSyAykwjnB8Z2R1ElVJ1TescPUJeBaDDi8gk"
+        key: ""
     }
     console.tron.log(params);
     return api.get('maps/api/place/nearbysearch/json', params);
